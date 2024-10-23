@@ -25,16 +25,19 @@ namespace WindowsFormsApp1
 
         private void butSubmit_Click(object sender, EventArgs e)
         {
-            if(txtBoxTitle.Text != "" && textBoxDescription.Text != "")
+            if(txtBoxTitle.Text == "" || textBoxDescription.Text == "" || 
+                (!checkBoxDemo.Checked && !checkBoxPreprod.Checked && !checkBoxProd.Checked))
             {
-                if (checkBoxDemo.Checked || checkBoxPreprod.Checked || checkBoxProd.Checked)
-                {
-                    MessageBox.Show("Task created:\n" +
+                MessageBox.Show("Some fields need to be completed");
+                return;
+            }
+
+            MessageBox.Show("Task created:\n" +
 "Title: " + txtBoxTitle.Text + "\n" +
 "Description: " + textBoxDescription.Text + "\n" +
 "Location: " + (comboBoxLocation.SelectedItem != null ? comboBoxLocation.SelectedItem.ToString() : "") + "\n" +
 "Criticity: " + comboBoxCriticity.SelectedItem.ToString() + "\n" +
-"Enviroment: " + (checkBoxPreprod.Checked ? "Preprod " : "") + 
+"Enviroment: " + (checkBoxPreprod.Checked ? "Preprod " : "") +
 (checkBoxProd.Checked ? "Prod " : "") +
 (checkBoxDemo.Checked ? "Demo " : "") + "\n" +
 "Start date: " + dateTimeStartDate.Text + "\n" +
@@ -42,10 +45,6 @@ namespace WindowsFormsApp1
 "Status: " + comboBoxStatus.SelectedItem.ToString() + "\n" +
 "Percent complete: " + comboBoxPercentComplete.SelectedItem.ToString() + "\n" +
 "Send Email? " + (checkBoxSendEmail.Checked ? "Yes" : "No"));
-                    return;
-                }
-            }
-            MessageBox.Show("Some camps need to be completed");
         }
 
         private void dateTimeStartDate_ValueChanged(object sender, EventArgs e)
@@ -56,7 +55,9 @@ namespace WindowsFormsApp1
         private void dateTimeStartDate_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete)
+            {
                 dateTimeStartDate.CustomFormat = " ";
+            }
         }
     }
 }
