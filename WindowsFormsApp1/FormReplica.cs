@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         private void butCancel_Click(object sender, EventArgs e)
         {
-            
+            // Reiniciar todos los valores
         }
 
         private void butSubmit_Click(object sender, EventArgs e)
@@ -31,9 +31,11 @@ namespace WindowsFormsApp1
                     MessageBox.Show(@"Task created:
 Title: " + txtBoxTitle.Text + "\n" +
 "Description: " + textBoxDescription.Text + "\n" +
-"Location: " + comboBoxLocation.SelectedItem.ToString() + "\n" +
+"Location: " + (comboBoxLocation.SelectedItem != null ? comboBoxLocation.SelectedItem.ToString() : "") + "\n" +
 "Criticity: " + comboBoxCriticity.SelectedItem.ToString() + "\n" +
-"Enviroment: " + "\n" +
+"Enviroment: " + (checkBoxPreprod.Checked ? "Preprod " : "") + 
+(checkBoxProd.Checked ? "Prod " : "") +
+(checkBoxDemo.Checked ? "Demo " : "") + "\n" +
 "Start date: " + dateTimeStartDate.Text + "\n" +
 "Duration: " + numUpDownDuration.Value.ToString() + " Hours" + "\n" +
 "Status: " + comboBoxStatus.SelectedItem.ToString() + "\n" +
@@ -43,6 +45,17 @@ Title: " + txtBoxTitle.Text + "\n" +
                 }
             }
             MessageBox.Show("Some camps need to be completed");
+        }
+
+        private void dateTimeStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimeStartDate.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void dateTimeStartDate_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete)
+                dateTimeStartDate.CustomFormat = " ";
         }
     }
 }

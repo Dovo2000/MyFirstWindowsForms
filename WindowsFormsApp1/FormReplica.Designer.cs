@@ -231,12 +231,16 @@
             // dateTimeStartDate
             // 
             this.dateTimeStartDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeStartDate.CustomFormat = " ";
             this.dateTimeStartDate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeStartDate.Location = new System.Drawing.Point(18, 404);
             this.dateTimeStartDate.Name = "dateTimeStartDate";
             this.dateTimeStartDate.Size = new System.Drawing.Size(350, 27);
             this.dateTimeStartDate.TabIndex = 6;
-            this.dateTimeStartDate.Value = new System.DateTime(2024, 10, 23, 10, 43, 25, 0);
+            this.dateTimeStartDate.Value = new System.DateTime(2024, 10, 23, 12, 16, 51, 0);
+            this.dateTimeStartDate.ValueChanged += new System.EventHandler(this.dateTimeStartDate_ValueChanged);
+            this.dateTimeStartDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateTimeStartDate_KeyDown);
             // 
             // txtDuration
             // 
