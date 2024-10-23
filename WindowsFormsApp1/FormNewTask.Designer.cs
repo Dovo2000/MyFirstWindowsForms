@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class FormReplica
+    partial class FormNewTask
     {
         /// <summary>
         /// Required designer variable.

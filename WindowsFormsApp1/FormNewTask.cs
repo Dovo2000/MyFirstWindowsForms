@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class FormReplica : Form
+    public partial class FormNewTask : Form
     {
-        public FormReplica()
+        public FormNewTask()
         {
             InitializeComponent();
         }
 
         private void butCancel_Click(object sender, EventArgs e)
         {
-            // Reiniciar todos los valores
+            // Go to the previous form
+            this.Close();
         }
 
         private void butSubmit_Click(object sender, EventArgs e)
@@ -28,8 +29,8 @@ namespace WindowsFormsApp1
             {
                 if (checkBoxDemo.Checked || checkBoxPreprod.Checked || checkBoxProd.Checked)
                 {
-                    MessageBox.Show(@"Task created:
-Title: " + txtBoxTitle.Text + "\n" +
+                    MessageBox.Show("Task created:\n" +
+"Title: " + txtBoxTitle.Text + "\n" +
 "Description: " + textBoxDescription.Text + "\n" +
 "Location: " + (comboBoxLocation.SelectedItem != null ? comboBoxLocation.SelectedItem.ToString() : "") + "\n" +
 "Criticity: " + comboBoxCriticity.SelectedItem.ToString() + "\n" +
