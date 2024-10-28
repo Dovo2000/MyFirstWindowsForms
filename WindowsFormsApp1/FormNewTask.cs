@@ -40,24 +40,11 @@ namespace WindowsFormsApp1
 "Enviroment: " + (checkBoxPreprod.Checked ? "Preprod " : "") +
 (checkBoxProd.Checked ? "Prod " : "") +
 (checkBoxDemo.Checked ? "Demo " : "") + "\n" +
-"Start date: " + dateTimeStartDate.Text + "\n" +
+"Start date: " + (dateTimeStartDate.Checked ? dateTimeStartDate.Value.ToString("dd/MM/yyyy") : "") + "\n" +
 "Duration: " + numUpDownDuration.Value.ToString() + " Hours" + "\n" +
 "Status: " + comboBoxStatus.SelectedItem.ToString() + "\n" +
 "Percent complete: " + comboBoxPercentComplete.SelectedItem.ToString() + "\n" +
 "Send Email? " + (checkBoxSendEmail.Checked ? "Yes" : "No"));
-        }
-
-        private void dateTimeStartDate_ValueChanged(object sender, EventArgs e)
-        {
-            dateTimeStartDate.CustomFormat = "dd/MM/yyyy";
-        }
-
-        private void dateTimeStartDate_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete)
-            {
-                dateTimeStartDate.CustomFormat = " ";
-            }
         }
     }
 }

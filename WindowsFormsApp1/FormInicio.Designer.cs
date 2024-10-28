@@ -33,9 +33,10 @@
             // 
             // butNewTask
             // 
+            this.butNewTask.AutoSize = true;
             this.butNewTask.Location = new System.Drawing.Point(93, 40);
             this.butNewTask.Name = "butNewTask";
-            this.butNewTask.Size = new System.Drawing.Size(96, 39);
+            this.butNewTask.Size = new System.Drawing.Size(97, 39);
             this.butNewTask.TabIndex = 2;
             this.butNewTask.Text = "Add new task";
             this.butNewTask.UseVisualStyleBackColor = true;
@@ -50,6 +51,7 @@
             this.Name = "FormInicio";
             this.Text = "Inicio";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
