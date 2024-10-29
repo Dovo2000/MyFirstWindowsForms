@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    internal abstract class Person
+    public abstract class Person
     {
         protected static int maxId = 0;
         protected string name;

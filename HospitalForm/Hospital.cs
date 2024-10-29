@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    internal class Hospital
+    public class Hospital
     {
         List<Person> people;
 
@@ -107,6 +107,16 @@ namespace Hospital
         public Patient GetPatientByID(int id)
         {
             return people.Find(p => p is Patient && p.Id == id) as Patient;
+        }
+
+        public List<Administrative> GetAdministrative()
+        {
+            return people.Where(p => p is Administrative).Cast<Administrative>().ToList();
+        }
+
+        public Administrative GetAdministrativeByID(int id)
+        {
+            return people.Find(p => p is Administrative && p.Id == id) as Administrative;
         }
     }
 }

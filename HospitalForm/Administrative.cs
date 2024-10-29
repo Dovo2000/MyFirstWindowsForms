@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    internal class Administrative : Person
+    public class Administrative : Person
     {
         public Administrative(string name, int age) : base(name, age)
         {

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    internal class Doctor : Person
+    public class Doctor : Person
     {
+        public string Speciality;
         List<Patient> patients;
-        string speciality;
         List<Appointment> appointments;
 
         public Doctor(string name, int age, string speciality) : base(name, age)
         {
             patients = new List<Patient>();
-            this.speciality = speciality;
+            this.Speciality = speciality;
             appointments = new List<Appointment>();
         }
 

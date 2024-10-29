@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    internal class Appointment
+    public class Appointment
     {
         public DateTime DateTime;
         public string Notes;

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewPerson.Designer.cs">
+      <DependentUpon>AddNewPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrative.cs" />
     <Compile Include="Appointment.cs" />
     <Compile Include="Doctor.cs" />
@@ -60,6 +66,9 @@
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddNewPerson.resx">
+      <DependentUpon>AddNewPerson.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HospitalManager.resx">
       <DependentUpon>HospitalManager.cs</DependentUpon>
     </EmbeddedResource>

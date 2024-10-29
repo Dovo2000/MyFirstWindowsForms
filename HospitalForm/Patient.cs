@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    internal class Patient : Person
+    public class Patient : Person
     {
         public string Illness;
         public string PhoneNumber;
