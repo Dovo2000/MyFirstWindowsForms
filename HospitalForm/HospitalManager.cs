@@ -1,4 +1,4 @@
-﻿using Hospital;
+﻿using HospitalManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +13,11 @@ namespace HospitalForm
 {
     public partial class HospitalManager : Form
     {
-        public Hospital.Hospital hospital;
+        public Hospital hospital;
 
         public HospitalManager()
         {
-            hospital = new Hospital.Hospital();
+            hospital = new Hospital();
 
             InitializeComponent();
             liViewDoctors.Visible = false;
@@ -236,6 +236,16 @@ namespace HospitalForm
             {
                 AssignDoctor assignForm = new AssignDoctor(hospital, index);
                 assignForm.Show();
+            }
+        }
+
+        private void butCheckPatients_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(liViewDoctors.SelectedItems[0].Text, out int index))
+            {
+                DoctorPatientsForm form = new DoctorPatientsForm(hospital.GetDoctorByID(index));
+            
+                form.Show();
             }
         }
     }

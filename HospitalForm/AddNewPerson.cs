@@ -1,4 +1,4 @@
-﻿using Hospital;
+﻿using HospitalManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +13,14 @@ namespace HospitalForm
 {
     public partial class AddNewPerson : Form
     {
-        Hospital.Hospital hospital;
+        Hospital hospital;
+
         public AddNewPerson()
         {
             InitializeComponent();
         }
 
-        public AddNewPerson(Hospital.Hospital hospital) : this()
+        public AddNewPerson(Hospital hospital) : this()
         {
             this.hospital = hospital;
         }

@@ -1,4 +1,4 @@
-﻿using Hospital;
+﻿using HospitalManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,7 @@ namespace HospitalForm
 {
     public partial class AssignDoctor : Form
     {
-        Hospital.Hospital hospital;
+        Hospital hospital;
         Patient patient;
 
         public AssignDoctor()
@@ -22,18 +22,19 @@ namespace HospitalForm
             InitializeComponent();
         }
         
-        public AssignDoctor(Hospital.Hospital hospital, int patientId) : this()
+        public AssignDoctor(Hospital hospital, int patientId) : this()
         {
             this.hospital = hospital;
             patient = hospital.GetPatientByID(patientId);
+            if (patient == null)
+                return;
+            
             ShowPatientInfo();
+            DisplayDoctorsInfo();
         }
 
         private void ShowPatientInfo()
         {
-            if (patient == null)
-                return;
-
             labelId.Text = labelId.Text + patient.Id.ToString();
             labelName.Text = labelName.Text + patient.Name;
             labelIllness.Text = labelIllness.Text + patient.Illness;
@@ -49,6 +50,24 @@ namespace HospitalForm
             }
             else
                 labelDocId.Visible = false;
+        }
+
+        private void DisplayDoctorsInfo()
+        {
+            if (patient == null) 
+                return;
+
+            liViewDoctors.Items.Clear();
+            foreach (Doctor doc in hospital.GetDoctors())
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = doc.Id.ToString();
+                item.SubItems.Add(doc.Name);
+                item.SubItems.Add(doc.Speciality);
+                item.SubItems.Add(doc.Age.ToString());
+
+                liViewDoctors.Items.Add(item);
+            }
         }
 
         private void butCancel_Click(object sender, EventArgs e)
