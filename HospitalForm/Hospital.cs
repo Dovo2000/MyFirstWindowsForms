@@ -35,6 +35,11 @@ namespace Hospital
             people.Remove(administrative);
         }
 
+        public void AddPatient(Patient patient)
+        {
+            people.Add(patient);
+        }
+
         public void AddPatient(Patient patient, int doctorId)
         {
             try
@@ -49,6 +54,7 @@ namespace Hospital
                 Console.WriteLine($"The doctor assigned to that ID couldn't be found: {ex.Message}");
             }
         }
+        
 
         public void RemovePatient(int patientId)
         {

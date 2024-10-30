@@ -31,24 +31,28 @@ namespace HospitalForm
 
         private void butSubmitNewPerson_Click(object sender, EventArgs e)
         {
-            switch (tabNewPerson.TabIndex)
+            switch (tabNewPerson.SelectedIndex)
             {
                 case 0:
                     // Adding a Doctor
                     Doctor newDoc = new Doctor(txtBoxDoctor.Text, (int) numericAgeDoctor.Value, comboBoxSpecialty.SelectedItem.ToString());
-                    
+                    hospital.AddDoctor(newDoc);
                     break;
                 case 1:
                     // Adding a Patient
                     Patient newPat = new Patient(txtBoxNamePatient.Text, (int) numericAgePatient.Value, txtBoxIllness.Text, txtBoxPhone.Text);
+                    hospital.AddPatient(newPat);
                     break;
                 case 2:
                     // Adding an Administrative
                     Administrative newAdmin = new Administrative(txtBoxNameAdmin.Text, (int) numericAgeAdmin.Value);
+                    hospital.AddAdministrative(newAdmin);
                     break;
                 default:
                     break;
             }
+
+            Close();
         }
     }
 }
