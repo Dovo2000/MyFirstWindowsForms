@@ -28,77 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem41 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "David",
             "665473214",
             "Esguince",
             "24",
             "2"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem42 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Pepito",
             "33",
             "Cardio"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem43 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "3"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem44 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "4"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem45 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "5"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem46 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "6"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem47 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "7"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem48 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "8"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem49 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "9"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem50 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "10"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem51 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Info, new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "David", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Control, new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Trauma"),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "25")}, -1);
-            System.Windows.Forms.ListViewItem listViewItem52 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "Pepito",
-            "Cardio",
-            "33"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem53 = new System.Windows.Forms.ListViewItem(new string[] {
-            "3",
-            "Ferran",
-            "Cyber",
-            "22"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem54 = new System.Windows.Forms.ListViewItem(new string[] {
-            "4"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem55 = new System.Windows.Forms.ListViewItem(new string[] {
-            "5"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem56 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Info, new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "David", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Control, new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "25")}, -1);
-            System.Windows.Forms.ListViewItem listViewItem57 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "Pepito",
-            "33"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem58 = new System.Windows.Forms.ListViewItem(new string[] {
-            "3",
-            "Ferran",
-            "22"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem59 = new System.Windows.Forms.ListViewItem(new string[] {
-            "4",
-            "Jan",
-            "23"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
-            System.Windows.Forms.ListViewItem listViewItem60 = new System.Windows.Forms.ListViewItem(new string[] {
-            "5"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Info, null);
             this.butDoctors = new System.Windows.Forms.Button();
             this.butAdd = new System.Windows.Forms.Button();
             this.butPatients = new System.Windows.Forms.Button();
             this.butAdmins = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.liViewPatients = new System.Windows.Forms.ListView();
+            this.liViewPeopleInfo = new System.Windows.Forms.ListView();
             this.IDPatients = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NamePatients = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PhonePatients = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -108,15 +71,6 @@
             this.butAppointments = new System.Windows.Forms.Button();
             this.butAsignDoctor = new System.Windows.Forms.Button();
             this.butCheckPatients = new System.Windows.Forms.Button();
-            this.liViewDoctors = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.liViewAdmin = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.butRemove = new System.Windows.Forms.Button();
             this.butUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -193,43 +147,43 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Hospital";
             // 
-            // liViewPatients
+            // liViewPeopleInfo
             // 
-            this.liViewPatients.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.liViewPatients.Alignment = System.Windows.Forms.ListViewAlignment.Left;
-            this.liViewPatients.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.liViewPatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.liViewPatients.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.liViewPeopleInfo.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.liViewPeopleInfo.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.liViewPeopleInfo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.liViewPeopleInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.liViewPeopleInfo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.IDPatients,
             this.NamePatients,
             this.PhonePatients,
             this.IllnessPatients,
             this.AgePatients,
             this.DoctorPatients});
-            this.liViewPatients.GridLines = true;
-            this.liViewPatients.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.liViewPatients.HideSelection = false;
-            this.liViewPatients.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem41,
-            listViewItem42,
-            listViewItem43,
-            listViewItem44,
-            listViewItem45,
-            listViewItem46,
-            listViewItem47,
-            listViewItem48,
-            listViewItem49,
-            listViewItem50});
-            this.liViewPatients.LabelWrap = false;
-            this.liViewPatients.Location = new System.Drawing.Point(54, 150);
-            this.liViewPatients.Margin = new System.Windows.Forms.Padding(0);
-            this.liViewPatients.MultiSelect = false;
-            this.liViewPatients.Name = "liViewPatients";
-            this.liViewPatients.Size = new System.Drawing.Size(551, 218);
-            this.liViewPatients.TabIndex = 1;
-            this.liViewPatients.UseCompatibleStateImageBehavior = false;
-            this.liViewPatients.View = System.Windows.Forms.View.Details;
-            this.liViewPatients.SelectedIndexChanged += new System.EventHandler(this.liViewPatients_SelectedIndexChanged);
+            this.liViewPeopleInfo.GridLines = true;
+            this.liViewPeopleInfo.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.liViewPeopleInfo.HideSelection = false;
+            this.liViewPeopleInfo.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10});
+            this.liViewPeopleInfo.LabelWrap = false;
+            this.liViewPeopleInfo.Location = new System.Drawing.Point(54, 150);
+            this.liViewPeopleInfo.Margin = new System.Windows.Forms.Padding(0);
+            this.liViewPeopleInfo.MultiSelect = false;
+            this.liViewPeopleInfo.Name = "liViewPeopleInfo";
+            this.liViewPeopleInfo.Size = new System.Drawing.Size(551, 218);
+            this.liViewPeopleInfo.TabIndex = 1;
+            this.liViewPeopleInfo.UseCompatibleStateImageBehavior = false;
+            this.liViewPeopleInfo.View = System.Windows.Forms.View.Details;
+            this.liViewPeopleInfo.SelectedIndexChanged += new System.EventHandler(this.liViewPersonInfo_SelectedIndexChanged);
             // 
             // IDPatients
             // 
@@ -309,100 +263,6 @@
             this.butCheckPatients.UseVisualStyleBackColor = false;
             this.butCheckPatients.Click += new System.EventHandler(this.butCheckPatients_Click);
             // 
-            // liViewDoctors
-            // 
-            this.liViewDoctors.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.liViewDoctors.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.liViewDoctors.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.liViewDoctors.GridLines = true;
-            this.liViewDoctors.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.liViewDoctors.HideSelection = false;
-            listViewItem51.StateImageIndex = 0;
-            this.liViewDoctors.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem51,
-            listViewItem52,
-            listViewItem53,
-            listViewItem54,
-            listViewItem55});
-            this.liViewDoctors.LabelWrap = false;
-            this.liViewDoctors.Location = new System.Drawing.Point(54, 150);
-            this.liViewDoctors.Margin = new System.Windows.Forms.Padding(0);
-            this.liViewDoctors.MultiSelect = false;
-            this.liViewDoctors.Name = "liViewDoctors";
-            this.liViewDoctors.Size = new System.Drawing.Size(551, 218);
-            this.liViewDoctors.TabIndex = 12;
-            this.liViewDoctors.UseCompatibleStateImageBehavior = false;
-            this.liViewDoctors.View = System.Windows.Forms.View.Details;
-            this.liViewDoctors.SelectedIndexChanged += new System.EventHandler(this.liViewDoctors_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 32;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 117;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Specialty";
-            this.columnHeader3.Width = 117;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Age";
-            this.columnHeader4.Width = 51;
-            // 
-            // liViewAdmin
-            // 
-            this.liViewAdmin.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.liViewAdmin.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.liViewAdmin.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader8});
-            this.liViewAdmin.GridLines = true;
-            this.liViewAdmin.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.liViewAdmin.HideSelection = false;
-            listViewItem56.StateImageIndex = 0;
-            this.liViewAdmin.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem56,
-            listViewItem57,
-            listViewItem58,
-            listViewItem59,
-            listViewItem60});
-            this.liViewAdmin.LabelWrap = false;
-            this.liViewAdmin.Location = new System.Drawing.Point(54, 150);
-            this.liViewAdmin.Margin = new System.Windows.Forms.Padding(0);
-            this.liViewAdmin.MultiSelect = false;
-            this.liViewAdmin.Name = "liViewAdmin";
-            this.liViewAdmin.Size = new System.Drawing.Size(551, 218);
-            this.liViewAdmin.TabIndex = 13;
-            this.liViewAdmin.UseCompatibleStateImageBehavior = false;
-            this.liViewAdmin.View = System.Windows.Forms.View.Details;
-            this.liViewAdmin.SelectedIndexChanged += new System.EventHandler(this.liViewAdmin_SelectedIndexChanged);
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "ID";
-            this.columnHeader5.Width = 32;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Name";
-            this.columnHeader6.Width = 117;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Age";
-            this.columnHeader8.Width = 51;
-            // 
             // butRemove
             // 
             this.butRemove.BackColor = System.Drawing.Color.IndianRed;
@@ -446,13 +306,11 @@
             this.Controls.Add(this.butCheckPatients);
             this.Controls.Add(this.butAsignDoctor);
             this.Controls.Add(this.butAppointments);
-            this.Controls.Add(this.liViewPatients);
+            this.Controls.Add(this.liViewPeopleInfo);
             this.Controls.Add(this.butAdmins);
             this.Controls.Add(this.butPatients);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butDoctors);
-            this.Controls.Add(this.liViewAdmin);
-            this.Controls.Add(this.liViewDoctors);
             this.Name = "HospitalManager";
             this.Text = "Hospital Management";
             this.ResumeLayout(false);
@@ -466,7 +324,7 @@
         private System.Windows.Forms.Button butAdmins;
         private System.Windows.Forms.Button butAdd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView liViewPatients;
+        private System.Windows.Forms.ListView liViewPeopleInfo;
         private System.Windows.Forms.ColumnHeader IDPatients;
         private System.Windows.Forms.ColumnHeader NamePatients;
         private System.Windows.Forms.ColumnHeader AgePatients;
@@ -476,15 +334,6 @@
         private System.Windows.Forms.Button butAppointments;
         private System.Windows.Forms.Button butAsignDoctor;
         private System.Windows.Forms.Button butCheckPatients;
-        private System.Windows.Forms.ListView liViewDoctors;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ListView liViewAdmin;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.Button butRemove;
         private System.Windows.Forms.Button butUpdate;
     }

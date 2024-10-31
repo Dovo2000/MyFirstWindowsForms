@@ -165,13 +165,12 @@
             // butCancel
             // 
             this.butCancel.BackColor = System.Drawing.Color.IndianRed;
-            this.butCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.butCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.butCancel.Location = new System.Drawing.Point(0, 359);
+            this.butCancel.Location = new System.Drawing.Point(358, 322);
             this.butCancel.Name = "butCancel";
-            this.butCancel.Size = new System.Drawing.Size(600, 37);
+            this.butCancel.Size = new System.Drawing.Size(110, 37);
             this.butCancel.TabIndex = 7;
             this.butCancel.Text = "Cancel";
             this.butCancel.UseVisualStyleBackColor = false;
@@ -180,13 +179,12 @@
             // butAssign
             // 
             this.butAssign.BackColor = System.Drawing.SystemColors.Highlight;
-            this.butAssign.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.butAssign.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAssign.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.butAssign.Location = new System.Drawing.Point(0, 322);
+            this.butAssign.Location = new System.Drawing.Point(131, 322);
             this.butAssign.Name = "butAssign";
-            this.butAssign.Size = new System.Drawing.Size(600, 37);
+            this.butAssign.Size = new System.Drawing.Size(110, 37);
             this.butAssign.TabIndex = 8;
             this.butAssign.Text = "Assign";
             this.butAssign.UseVisualStyleBackColor = false;
