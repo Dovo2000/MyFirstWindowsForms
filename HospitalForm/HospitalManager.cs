@@ -15,36 +15,24 @@ namespace HospitalForm
     {
         public Hospital hospital;
 
-        private ListView doctorsList;
-        private ListView administrativeList;
-        private ListView patientsList;
+        private List<ListViewItem> doctorsList;
+        private List<ListViewItem> administrativeList;
+        private List<ListViewItem> patientsList;
+
+        private int peopleTabIndex;
 
         public HospitalManager()
         {
             InitializeComponent();
 
             hospital = new Hospital();
-            doctorsList = new ListView();
-            administrativeList = new ListView();
-            patientsList = new ListView();
+            doctorsList = new List<ListViewItem>();
+            administrativeList = new List<ListViewItem>();
+            patientsList = new List<ListViewItem>();
 
-            doctorsList.Columns.Add("ID");
-            doctorsList.Columns.Add("Name");
-            doctorsList.Columns.Add("Specialty");
-            doctorsList.Columns.Add("Age");
+            peopleTabIndex = 0;
 
-            administrativeList.Columns.Add("ID");
-            administrativeList.Columns.Add("Name");
-            administrativeList.Columns.Add("Age");
-
-            patientsList.Columns.Add("ID");
-            patientsList.Columns.Add("Name");
-            patientsList.Columns.Add("Illness");
-            patientsList.Columns.Add("Age");
-            patientsList.Columns.Add("Doctor ID");
-
-
-            liViewPeopleInfo.Visible = false;
+            liViewPeopleInfo.Visible = true;
 
             butAsignDoctor.Enabled = false;
             butAsignDoctor.Visible = false;
@@ -54,33 +42,16 @@ namespace HospitalForm
             butAppointments.Visible = false;
 
             butRemove.Enabled = false;
-
-
-
-            
         }
 
         private void butDoctors_Click(object sender, EventArgs e)
         {
-            butAsignDoctor.Enabled = false;
-            butAsignDoctor.Visible = false;
-
-            liViewPeopleInfo.Items.Clear();
-            liViewPeopleInfo.Columns.Clear();
-
-            foreach (ListViewItem item in doctorsList.Items)
+            if (peopleTabIndex != 1)
             {
-                liViewPeopleInfo.Items.Add(item);
-            }
+                peopleTabIndex = 1;
 
-            liViewPeopleInfo.Columns.Add("ID");
-            liViewPeopleInfo.Columns.Add("Name");
-            liViewPeopleInfo.Columns.Add("Specialty");
-            liViewPeopleInfo.Columns.Add("Age");
-
-
-            if (!liViewPeopleInfo.Visible)
-            {
+                butAsignDoctor.Enabled = false;
+                butAsignDoctor.Visible = false;
                 butCheckPatients.Visible = true;
 
                 butAppointments.Enabled = true;
@@ -88,31 +59,19 @@ namespace HospitalForm
 
                 liViewPeopleInfo.Visible = true;
             }
-            else
-            {
-                butCheckPatients.Visible = false;
-                butCheckPatients.Enabled = false;
 
-                butAppointments.Enabled = false;
-                butAppointments.Visible = false;
-
-                butRemove.Enabled = false;
-
-                liViewPeopleInfo.Visible = false;
-            }
-
-            liViewDoctors_Update();
+            ListViewItemsPeople_Update();
         }
 
         private void butPatients_Click(object sender, EventArgs e)
         {
-            butCheckPatients.Visible = false;
-            butCheckPatients.Enabled = false;
 
-            liViewPeopleInfo = patientsList;
-
-            if (!liViewPeopleInfo.Visible)
+            if (peopleTabIndex != 2)
             {
+                peopleTabIndex = 2;
+
+                butCheckPatients.Visible = false;
+                butCheckPatients.Enabled = false;
                 butAsignDoctor.Visible = true;
 
                 butAppointments.Enabled = true;
@@ -122,37 +81,29 @@ namespace HospitalForm
 
                 liViewPeopleInfo.Visible = true;
             }
-            else
-            {
-                butAsignDoctor.Enabled = false;
-                butAsignDoctor.Visible = false;
 
-                butAppointments.Enabled = false;
-                butAppointments.Visible = false;
-
-                butRemove.Enabled = false;
-
-                liViewPeopleInfo.Visible = false;
-            }
+            ListViewItemsPeople_Update();
         }
 
         private void butAdmins_Click(object sender, EventArgs e)
         {
-            butCheckPatients.Visible = false;
-            butCheckPatients.Enabled = false;
+            if(peopleTabIndex != 3)
+            {
+                peopleTabIndex = 3;
 
-            butAppointments.Enabled = false;
-            butAppointments.Visible = false;
+                butCheckPatients.Visible = false;
+                butCheckPatients.Enabled = false;
 
-            liViewPeopleInfo.Visible = false;
+                butAppointments.Enabled = false;
+                butAppointments.Visible = false;
 
-            butAsignDoctor.Enabled = false;
-            butAsignDoctor.Visible = false;
+                butAsignDoctor.Enabled = false;
+                butAsignDoctor.Visible = false;
 
-            liViewPeopleInfo = administrativeList;
-
-            if (!liViewPeopleInfo.Visible)
                 liViewPeopleInfo.Visible = true;
+            }
+
+            ListViewItemsPeople_Update();
         }
 
         private void butAdd_Click(object sender, EventArgs e)
@@ -171,70 +122,100 @@ namespace HospitalForm
             }
         }
 
-        private void liViewDoctors_Update()
+        private void ListViewItemsPeople_Update()
         {
-            doctorsList.Items.Clear();
+
+            switch(peopleTabIndex)
+            {
+                case 0:
+                    // Mostrar la info de todo el mundo
+                    //DisplayEveryoneInfo();
+                    break;
+
+                case 1:
+                    // Mostrar la info de los doctores
+                    DisplayDoctorsInfo();
+                break;
+
+                case 2:
+                    // Mostrar la info de los pacientes
+                    DisplayPatientsInfo();
+                break;
+
+                case 3:
+                    // Mostrar la info de los administrativos
+                    DisplayAdministrativesInfo();
+                break;
+
+                default:
+                break;
+            }
+        }
+
+        private void DisplayDoctorsInfo()
+        {
+            liViewPeopleInfo.Clear();
+
+            liViewPeopleInfo.Columns.Add("ID");
+            liViewPeopleInfo.Columns.Add("Name");
+            liViewPeopleInfo.Columns.Add("Specialty");
+            liViewPeopleInfo.Columns.Add("Age");
 
             foreach (Doctor doc in hospital.GetDoctors())
             {
-                doctorsList.Items.Add(doc.Id.ToString());
+                liViewPeopleInfo.Items.Add(new ListViewItem(doc.Id.ToString()));
 
-                doctorsList.Items[doctorsList.Items.Count - 1].SubItems.Add(doc.Name.ToString());
-                doctorsList.Items[doctorsList.Items.Count - 1].SubItems.Add(doc.Speciality);
-                doctorsList.Items[doctorsList.Items.Count - 1].SubItems.Add(doc.Age.ToString());
+                liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(doc.Name.ToString());
+                liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(doc.Speciality);
+                liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(doc.Age.ToString());
             }
-
-            liViewPeopleInfo = doctorsList;
         }
 
-        private void liViewPatients_Update()
+        private void DisplayPatientsInfo()
         {
-            patientsList.Items.Clear();
+            liViewPeopleInfo.Clear();
+
+            liViewPeopleInfo.Columns.Add("ID");
+            liViewPeopleInfo.Columns.Add("Name");
+            liViewPeopleInfo.Columns.Add("Phone");
+            liViewPeopleInfo.Columns.Add("Illness");
+            liViewPeopleInfo.Columns.Add("Age");
+            liViewPeopleInfo.Columns.Add("Doctor ID");
 
             foreach (Patient pat in hospital.GetPatients())
             {
-                patientsList.Items.Add(pat.Id.ToString());
+                liViewPeopleInfo.Items.Add(new ListViewItem(pat.Id.ToString()));
 
-                patientsList.Items[patientsList.Items.Count - 1].SubItems.Add(pat.Name.ToString());
-                patientsList.Items[patientsList.Items.Count - 1].SubItems.Add(pat.PhoneNumber);
-                patientsList.Items[patientsList.Items.Count - 1].SubItems.Add(pat.Illness);
-                patientsList.Items[patientsList.Items.Count - 1].SubItems.Add(pat.Age.ToString());
+                liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(pat.Name.ToString());
+                liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(pat.PhoneNumber);
+                liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(pat.Illness);
+                liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(pat.Age.ToString());
 
                 if (pat.AssignedDoctor != null)
-                    patientsList.Items[patientsList.Items.Count - 1].SubItems.Add(pat.AssignedDoctor.Id.ToString());
+                    liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(pat.AssignedDoctor.Id.ToString());
             }
-
-            liViewPeopleInfo.Clear();
-            liViewPeopleInfo = patientsList;
         }
 
-        private void liViewAdministrative_Update()
+        private void DisplayAdministrativesInfo()
         {
-            administrativeList.Items.Clear();
+            liViewPeopleInfo.Clear();
+
+            liViewPeopleInfo.Columns.Add("ID");
+            liViewPeopleInfo.Columns.Add("Name");
+            liViewPeopleInfo.Columns.Add("Age");
 
             foreach (Administrative admin in hospital.GetAdministrative())
             {
-                administrativeList.Items.Add(admin.Id.ToString());
+                liViewPeopleInfo.Items.Add(new ListViewItem(admin.Id.ToString()));
 
-                administrativeList.Items[administrativeList.Items.Count - 1].SubItems.Add(admin.Name.ToString());
-                administrativeList.Items[administrativeList.Items.Count - 1].SubItems.Add(admin.Age.ToString());
+                liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(admin.Name.ToString());
+                liViewPeopleInfo.Items[liViewPeopleInfo.Items.Count - 1].SubItems.Add(admin.Age.ToString());
             }
-
-            liViewPeopleInfo.Clear();
-            liViewPeopleInfo = administrativeList;
         }
 
         private void butUpdate_Click(object sender, EventArgs e)
         {
-            if (liViewPeopleInfo.Visible)
-            {
-                // If doctors
-                liViewDoctors_Update();
-                // If patients
-                liViewPatients_Update();
-                // If admins
-                liViewAdministrative_Update();
-            }
+            ListViewItemsPeople_Update();
         }
 
         private void butRemove_Click(object sender, EventArgs e)
@@ -243,13 +224,14 @@ namespace HospitalForm
             {
                 if(int.TryParse(liViewPeopleInfo.SelectedItems[0].Text, out int index))
                 {
-                    // If doctor
-                    hospital.RemoveDoctor(hospital.GetDoctorByID(index));
-                    // If Patient
-                    hospital.RemovePatient(index);
-                    // If Admin
-                    hospital.RemoveAdministrative(hospital.GetAdministrativeByID(index));
-                    liViewPeopleInfo.SelectedItems[0].Remove();
+                    if(peopleTabIndex == 1)
+                        hospital.RemoveDoctor(hospital.GetDoctorByID(index));
+                    else if (peopleTabIndex == 2)
+                        hospital.RemovePatient(index);
+                    else if(peopleTabIndex == 3)
+                        hospital.RemoveAdministrative(hospital.GetAdministrativeByID(index));
+
+                    ListViewItemsPeople_Update();
                 }
             }
         }
