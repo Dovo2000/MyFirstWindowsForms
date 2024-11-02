@@ -72,6 +72,7 @@ namespace HospitalForm
 
         private void butCancel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
 
@@ -83,6 +84,7 @@ namespace HospitalForm
                     hospital.GetPatientByID(patient.Id).AssignedDoctor = hospital.GetDoctorByID(index);
             }
 
+            DialogResult = DialogResult.OK;
             Close();
         }
 

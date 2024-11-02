@@ -32,6 +32,7 @@ namespace HospitalForm
 
             peopleTabIndex = 0;
 
+            liViewPeopleInfo.Clear();
             liViewPeopleInfo.Visible = true;
 
             butAsignDoctor.Enabled = false;
@@ -52,12 +53,14 @@ namespace HospitalForm
 
                 butAsignDoctor.Enabled = false;
                 butAsignDoctor.Visible = false;
+
                 butCheckPatients.Visible = true;
+                butCheckPatients.Enabled = false;
 
                 butAppointments.Enabled = true;
                 butAppointments.Visible = true;
 
-                liViewPeopleInfo.Visible = true;
+                butRemove.Enabled = false;
             }
 
             ListViewItemsPeople_Update();
@@ -72,14 +75,14 @@ namespace HospitalForm
 
                 butCheckPatients.Visible = false;
                 butCheckPatients.Enabled = false;
+
                 butAsignDoctor.Visible = true;
+                butAsignDoctor.Enabled = false;
 
                 butAppointments.Enabled = true;
                 butAppointments.Visible = true;
 
                 butRemove.Enabled = false;
-
-                liViewPeopleInfo.Visible = true;
             }
 
             ListViewItemsPeople_Update();
@@ -100,7 +103,7 @@ namespace HospitalForm
                 butAsignDoctor.Enabled = false;
                 butAsignDoctor.Visible = false;
 
-                liViewPeopleInfo.Visible = true;
+                butRemove.Enabled = false;
             }
 
             ListViewItemsPeople_Update();
@@ -109,7 +112,8 @@ namespace HospitalForm
         private void butAdd_Click(object sender, EventArgs e)
         {
             AddNewPerson addPersonForm = new AddNewPerson(hospital);
-            addPersonForm.Show(this);
+            if(addPersonForm.ShowDialog(this) == DialogResult.OK)
+                ListViewItemsPeople_Update();
         }
 
         private void liViewPersonInfo_SelectedIndexChanged(object sender, EventArgs e)
@@ -241,7 +245,9 @@ namespace HospitalForm
             if (int.TryParse(liViewPeopleInfo.SelectedItems[0].Text, out int index))
             {
                 AssignDoctor assignForm = new AssignDoctor(hospital, index);
-                assignForm.Show();
+
+                if (assignForm.ShowDialog() == DialogResult.OK)
+                    ListViewItemsPeople_Update();
             }
         }
 
@@ -250,7 +256,7 @@ namespace HospitalForm
             if (int.TryParse(liViewPeopleInfo.SelectedItems[0].Text, out int index))
             {
                 DoctorPatientsForm form = new DoctorPatientsForm(hospital.GetDoctorByID(index));
-            
+
                 form.Show();
             }
         }

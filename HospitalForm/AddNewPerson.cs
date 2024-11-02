@@ -27,6 +27,7 @@ namespace HospitalForm
 
         private void butCancelNewPerson_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
 
@@ -53,6 +54,7 @@ namespace HospitalForm
                     break;
             }
 
+            DialogResult = DialogResult.OK;
             Close();
         }
     }
