@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace EmployeesManager
 {
-    internal class DataBaseManagement
+    internal class DataBaseConnection
     {
         public SqlConnection connection;
 
         string connectionString;
 
-        public DataBaseManagement()
+        public DataBaseConnection()
         {
             connectionString = "Data Source=85.208.21.117,54321;" +
                 "Initial Catalog=DavidMartinEmployees;" +
@@ -47,6 +47,16 @@ namespace EmployeesManager
                 return;
 
             connection.Close();
-        }        
+        }
+
+        public static object DBNullToNull(object value)
+        {
+            return value == DBNull.Value ? null : value;
+        }
+
+        public static object NullToDBNull(object value)
+        {
+            return value ?? DBNull.Value;
+        }
     }
 }

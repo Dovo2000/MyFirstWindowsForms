@@ -119,7 +119,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 117);
+            this.label2.Location = new System.Drawing.Point(47, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 20);
             this.label2.TabIndex = 8;
@@ -129,7 +129,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 158);
+            this.label3.Location = new System.Drawing.Point(47, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 9;
@@ -179,6 +179,7 @@
             this.liBoxJobs.Name = "liBoxJobs";
             this.liBoxJobs.Size = new System.Drawing.Size(316, 116);
             this.liBoxJobs.TabIndex = 14;
+            this.liBoxJobs.SelectedIndexChanged += new System.EventHandler(this.liBoxJobs_SelectedIndexChanged);
             // 
             // butUpdate
             // 
