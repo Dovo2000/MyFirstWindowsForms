@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace EmployeesManager
 {
-    internal class DAL_Job
+    internal class DAL_Jobs
     {
         DataBaseConnection dataBaseManager;
 
-        public DAL_Job()
+        public DAL_Jobs()
         {
             dataBaseManager = new DataBaseConnection();
         }
@@ -60,12 +60,12 @@ namespace EmployeesManager
             }
         }
 
-        public List<Job> Select()
+        public List<jobs> Select()
         {
             try
             {
                 
-                List<Job> jobs = new List<Job>();
+                List<jobs> jobsList = new List<jobs>();
 
                 string sqlQuery = "SELECT * FROM jobs";
 
@@ -81,24 +81,24 @@ namespace EmployeesManager
                         decimal? minSalary = reader.IsDBNull(2) ? (decimal?) null : reader.GetDecimal(2); 
                         decimal? maxSalary = reader.IsDBNull(3) ? (decimal?) null : reader.GetDecimal(3);
 
-                        Job job = new Job(id, jobTitle, minSalary, maxSalary);
+                        jobs job = new jobs(id, jobTitle, minSalary, maxSalary);
 
-                        jobs.Add(job);
+                        jobsList.Add(job);
                     }
                 }
 
                 dataBaseManager.Disconnect();
-                return jobs;
+                return jobsList;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 MessageBox.Show("Error: " + e.Message);
-                return new List<Job>();
+                return new List<jobs>();
             }
         }
 
-        public void Update(Job job)
+        public void Update(jobs job)
         {
             try
             {
