@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace EmployeesManager
 {
-    public partial class Form1 : Form
+    public partial class FormJobs : Form
     {
         DAL_Job jobDBController;
 
-        public Form1()
+        public FormJobs()
         {
             InitializeComponent();
 

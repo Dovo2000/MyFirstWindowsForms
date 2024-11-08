@@ -1,6 +1,6 @@
 ﻿namespace EmployeesManager
 {
-    partial class Form1
+    partial class FormJobs
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -194,7 +194,7 @@
             this.butUpdate.UseVisualStyleBackColor = true;
             this.butUpdate.Click += new System.EventHandler(this.butUpdate_Click);
             // 
-            // Form1
+            // FormJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -212,8 +212,8 @@
             this.Controls.Add(this.txtBoxJobTitle);
             this.Controls.Add(this.butCancel);
             this.Controls.Add(this.butAdd);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormJobs";
+            this.Text = "Jobs";
             ((System.ComponentModel.ISupportInitialize)(this.numericMinSalary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMaxSalary)).EndInit();
             this.ResumeLayout(false);
