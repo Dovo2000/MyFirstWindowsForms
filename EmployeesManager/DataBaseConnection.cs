@@ -17,11 +17,7 @@ namespace EmployeesManager
 
         public DataBaseConnection()
         {
-            connectionString = "Data Source=85.208.21.117,54321;" +
-                "Initial Catalog=DavidMartinEmployees;" +
-                "User ID=sa;" +
-                "Password=Sql#123456789;" +
-                "TrustServerCertificate=True;";
+            connectionString = "";
 
             connection = new SqlConnection(connectionString);
         }
