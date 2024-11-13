@@ -48,27 +48,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_Employee.cs" />
-    <Compile Include="DataBaseConnection.cs" />
+    <Compile Include="SQLConnection %28deprecated%29\DataBaseConnection.cs" />
     <Compile Include="DataClassTablesEmployees.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassTablesEmployees.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Employee.cs" />
+    <Compile Include="SQLConnection %28deprecated%29\Employee.cs" />
     <Compile Include="EmployeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmployeesForm.Designer.cs">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extension.cs" />
+    <Compile Include="employeesExtension.cs" />
     <Compile Include="FormJobs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormJobs.Designer.cs">
       <DependentUpon>FormJobs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Job.cs" />
+    <Compile Include="SQLConnection %28deprecated%29\Job.cs" />
     <Compile Include="DAL_Jobs.cs" />
     <Compile Include="jobsExtension.cs" />
     <Compile Include="Program.cs" />

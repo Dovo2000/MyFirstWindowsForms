@@ -26,7 +26,7 @@ namespace EmployeesManager
             decimal? minSalary = numericMinSalary.Value <= 0 ? null : (decimal?) numericMinSalary.Value;
             decimal? maxSalary = numericMaxSalary.Value <= 0 ? null : (decimal?) numericMaxSalary.Value;
 
-            Job job = new Job(txtBoxJobTitle.Text, minSalary, maxSalary);
+            jobs job = new jobs(txtBoxJobTitle.Text, minSalary, maxSalary);
 
             jobDBController.Insert(job);
         }
@@ -41,34 +41,6 @@ namespace EmployeesManager
         private void butRefresh_Click(object sender, EventArgs e)
         {
             RefreshJobListBox();
-            /*
-            DataClasses1DataContext dc = new DataClasses1DataContext(); // siempre para acceder a la base de datos
-
-            // Modo pseudo-SQL
-            var data = from emp in dc.employees
-                       where emp.first_name.Contains("S")
-                       select emp;
-
-            var data2 = dc.employees.Where(x => x.first_name.Contains("S"));
-
-            // para coger 1 solo
-            employees theOne = data.FirstOrDefault();
-            //employees theOne = data.SingleOrDefault();
-
-            liBoxJobs.DataSource = data;
-
-            theOne.first_name = "*" + theOne.first_name;
-
-            dc.SubmitChanges();
-
-            employees theNew = new employees();
-            theNew.first_name = "Sa";
-            theNew.last_name = "Bo";
-            //etc.
-            dc.employees.InsertOnSubmit(theNew);
-
-            dc.SubmitChanges();
-            */
         }
 
         private void butUpdate_Click(object sender, EventArgs e)
@@ -130,9 +102,9 @@ namespace EmployeesManager
         void RefreshJobListBox()
         {
             liBoxJobs.Items.Clear();
-            List<Job> jobs = jobDBController.Select();
+            List<jobs> jobsList = jobDBController.Select();
 
-            foreach (Job job in jobs)
+            foreach (jobs job in jobsList)
             {
                 liBoxJobs.Items.Add(job.ToString());
             }

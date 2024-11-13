@@ -25,7 +25,7 @@ namespace EmployeesManager
         {
             this.job_id = job_id;
         }
-
+        
         public override string ToString()
         {
             return $"{job_id}/{job_title}/{(min_salary == null ? "NULL" : min_salary.ToString())}/{(max_salary == null ? "NULL" : max_salary.ToString())}";
